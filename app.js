@@ -8,14 +8,14 @@ const options = {
 	ws: true, // proxy websockets
 	router: function(req) {
 		console.log(req.headers);
-		if (req.headers["x-host"] === "w.xxmrsg.com") {
+		if (req.headers["host"] === "w.xxmrsg.com") {
 			return `http://www.qingful.com`;
 		}
 
-		let hosts = req.headers["x-host"].split(".");
+		let hosts = req.headers["host"].split(".");
 		let module = hosts[0];
 		if (hosts.length <= 2) {
-			return `http://www.${req.headers["x-host"]}`;
+			return `http://www.${req.headers["host"]}`;
 		}
 		console.log(`http://${module}.qingful.com`);
 		return `http://${module}.qingful.com`;
