@@ -7,6 +7,7 @@ const options = {
 	changeOrigin: true, // needed for virtual hosted sites
 	ws: true, // proxy websockets
 	router: function(req) {
+		console.log(req.headers);
 		if (req.headers["x-host"] === "w.xxmrsg.com") {
 			return `http://www.qingful.com`;
 		}
