@@ -1,0 +1,4 @@
+1.安装nodejs，安装yarn，安装pm2
+2.进入qingful-agent-proxy根目录，命令行执行yarn，安装依赖
+3.命令行执行pm2 start pm2.json，启动项目
+4.配置apache或者配置nginx（具体参考百度-nginx/apache node）
